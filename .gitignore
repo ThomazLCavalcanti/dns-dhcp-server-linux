@@ -1,0 +1,19 @@
+# Arquivos temporários e de sistema
+*.log
+*.swp
+*.tmp
+*.bak
+*.old
+
+# Pastas e arquivos gerados por testes
+__pycache__/
+*.pyc
+
+# Backups de editores
+*~
+
+# Configurações de rede (exemplo de segurança)
+configs/secrets.env
+
+# Arquivos de captura
+*.pcap
