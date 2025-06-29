@@ -1,0 +1,15 @@
+$TTL    604800
+@       IN      SOA     ns.exemplo.local. admin.exemplo.local. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+; Servidores DNS
+@       IN      NS      ns.exemplo.local.
+
+; Hosts
+ns      IN      A       192.168.56.10
+srv1    IN      A       192.168.56.11
+srv2    IN      A       192.168.56.12
