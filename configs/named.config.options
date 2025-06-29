@@ -1,0 +1,22 @@
+options {
+    directory "/var/cache/bind";
+
+    // Permite consultas apenas da rede local
+    listen-on { any; };
+    allow-query { 192.168.56.0/24; localhost; };
+
+    // Ativa a recursão apenas para clientes autorizados
+    recursion yes;
+    allow-recursion { 192.168.56.0/24; };
+
+    // Encaminhadores de DNS (pode usar outros se desejar)
+    forwarders {
+        8.8.8.8;
+        8.8.4.4;
+    };
+
+    dnssec-validation auto;
+
+    auth-nxdomain no;    # Conformidade com RFC
+    listen-on-v6 { any; };
+};
